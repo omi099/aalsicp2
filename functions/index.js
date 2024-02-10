@@ -1,5 +1,5 @@
 const express = require("express");
-const ejs = require('ejs');
+// const ejs = require('ejs');
 const path = require("path");
 const axios = require("axios");
 const fs = require("fs");
@@ -16,6 +16,7 @@ const app = express();
 
 app.set('views', path.join(__dirname, '../views'));
 app.set("view engine", "ejs");
+app.engine("ejs", require("ejs").__express);
 
 const currentDirectory = __dirname;
 
