@@ -1,0 +1,17 @@
+{
+  "name": "aalsicp2",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node functions/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "dotenv": "^16.0.0",
+    "serverless-http": "^2.7.0"
+  }
+}
