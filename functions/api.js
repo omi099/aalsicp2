@@ -11,7 +11,7 @@ const ejs = require('ejs')
 const app = express();
 
 // Set the views directory and view engine
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join("views"));
 app.set("view engine", "ejs");
 
 // Serve static files from the 'public' directory
