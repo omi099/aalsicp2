@@ -61,7 +61,7 @@ const removeTokenFromFile = () => {
   }
 };
 
-app.get("/", async (req, res) => {
+router.get("/", async (req, res) => {
   // Check if the token file exists
   if (fs.existsSync(TOKEN_FILE_PATH)) {
     const token = readTokenFromFile();
@@ -157,5 +157,5 @@ const generateNewToken = async () => {
 //   console.log(`Server is running on port ${PORT}`);
 // });
 
-app.use('/.netlify/functions/index', app);
+app.use('/.netlify/functions/index', router);
 module.exports.handler = serverless(app);
