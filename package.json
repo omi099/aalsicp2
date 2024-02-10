@@ -6,7 +6,7 @@
     "build": "netlify deploy --prod"
   },
   "dependencies": {
-     "netlify-cli": "^13.1.6",
+    "netlify-cli": "^13.1.6",
     "netlify-lambda": "^2.0.16",
     "axios": "^1.6.7",
     "dotenv": "^16.4.1",
