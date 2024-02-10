@@ -1,9 +1,9 @@
 {
   "main": "api.js",
-   "scripts": {
+  "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src",
-   }
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src"
+  },
   "dependencies": {
     "netlify-lambda": "^1.4.3",
     "axios": "^1.6.7",
