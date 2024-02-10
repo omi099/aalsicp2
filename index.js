@@ -4,6 +4,7 @@ const axios = require("axios");
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const serverless = require('serverless-http');
 
 const app = express();
 
@@ -151,7 +152,10 @@ const generateNewToken = async () => {
 };
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+// app.use('/.netlify/functions/api', router);
+module.exports.handler = serverless(app);
