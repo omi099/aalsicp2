@@ -12,9 +12,8 @@ const app = express();
 
 // app.use(express.static(path.join(__dirname)));
 
-// app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));
 
-app.set('views', path.join('/.netlify/views'))
 app.set("view engine", "ejs");
 app.engine("ejs", require("ejs").__express);
 
