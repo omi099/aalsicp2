@@ -157,5 +157,5 @@ const generateNewToken = async () => {
 //   console.log(`Server is running on port ${PORT}`);
 // });
 
-app.use('/.netlify/functions/api', router);
+app.use('/.netlify/functions/serve', router);
 module.exports.handler = serverless(app);
