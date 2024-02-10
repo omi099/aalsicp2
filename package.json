@@ -1,5 +1,5 @@
 {
-  "main": "api.js",
+  "main": "index.js",
   "scripts": {
     "start": "netlify dev",
     "build": "netlify build"
