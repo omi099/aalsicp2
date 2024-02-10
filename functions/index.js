@@ -14,8 +14,22 @@ const app = express();
 
 // app.set("views", path.join(__dirname, "views"));
 
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
+
+const currentDirectory = __dirname;
+
+fs.readdir(currentDirectory, (err, files) => {
+  if (err) {
+    console.error('Error reading directory:', err);
+    return;
+  }
+
+  console.log('Files and directories in', currentDirectory, ':');
+  files.forEach(file => {
+    console.log(file);
+  });
+});
 
 const TOKEN_FILE_PATH = path.join(__dirname, "token.txt");
 
