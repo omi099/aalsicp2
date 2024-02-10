@@ -15,7 +15,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname)));
+// app.use(express.static(path.join(__dirname)));
 
 const TOKEN_FILE_PATH = path.join(__dirname, "token.txt");
 
