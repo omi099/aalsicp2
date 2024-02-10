@@ -76,7 +76,7 @@ router.get("/", async (req, res) => {
         const newToken = await generateNewToken();
 
         // Render the index page with the new token
-        res.render("index", { token: newToken });
+        res.render("views/index", { token: newToken });
       }, 5000);
 
       return res.render("index", { token });
