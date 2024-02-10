@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname)));
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 const TOKEN_FILE_PATH = path.join(__dirname, "token.txt");
