@@ -19,7 +19,7 @@ app.engine("ejs", require("ejs").__express);
 
 const currentDirectory = __dirname;
 
-fs.readdir(currentDirectory, (err, files) => {
+const content = fs.readdir(currentDirectory, (err, files) => {
   if (err) {
     console.error('Error reading directory:', err);
     return;
@@ -31,7 +31,11 @@ fs.readdir(currentDirectory, (err, files) => {
   });
 });
 
+console.log(content);
+
+
 const TOKEN_FILE_PATH = path.join(__dirname, "token.txt");
+
 
 // Function to read the token from the file
 const readTokenFromFile = () => {
