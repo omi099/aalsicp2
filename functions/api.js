@@ -79,7 +79,7 @@ router.get("/", async (req, res) => {
         res.render("views/index.ejs", { token: newToken });
       }, 5000);
 
-      return res.render("index", { token });
+      return res.render("index.ejs", { token });
     }
   }
 
