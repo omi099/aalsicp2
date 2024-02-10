@@ -5,8 +5,7 @@ const fs = require("fs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const serverless = require('serverless-http');
-const router = express.Router()
-const ejs = require('ejs')
+const router = express.Router();
 
 const app = express();
 
