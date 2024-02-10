@@ -76,10 +76,10 @@ router.get("/", async (req, res) => {
         const newToken = await generateNewToken();
 
         // Render the index page with the new token
-        res.render("views/index.ejs", { token: newToken });
+        res.render("index", { token: newToken });
       }, 5000);
 
-      return res.render("index.ejs", { token });
+      return res.render("index", { token });
     }
   }
 
@@ -87,7 +87,7 @@ router.get("/", async (req, res) => {
   const newToken = await generateNewToken();
 
   // Render the index page with the new token
-  return res.render("index.ejs", { token: newToken });
+  return res.render("index", { token: newToken });
 });
 
 // Function to generate a new token and handle file writing
